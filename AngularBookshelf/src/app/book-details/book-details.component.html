@@ -1,0 +1,10 @@
+<div *ngIf="book">
+  <h2>{{book.title}}</h2>
+  <p>by {{book.author}}</p>
+  <p>Your current page: {{book.currentPage}}</p>
+  <div>
+    <label>Current Page:
+      <input [(ngModel)]="book.currentPage" placeholder="page">
+    </label>
+  </div>
+</div>

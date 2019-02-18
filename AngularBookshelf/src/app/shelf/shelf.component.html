@@ -1,0 +1,11 @@
+<h2>{{shelf.name}}</h2>
+<ol class="books">
+  <li *ngFor="let book of shelf.books"
+      [class.selected]="book === selectedBook"
+      (click)="onSelect(book)">
+    <!--add a badge, perhaps numbered?-->
+    {{book.title}}
+  </li>
+</ol>
+
+<book-details [book]="selectedBook"></book-details>
