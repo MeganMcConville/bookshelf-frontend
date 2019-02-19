@@ -3,4 +3,5 @@ export class Book {
  author: string;
  currentPage: number;
  comments: string[];
+ id: number;
 }

@@ -1,11 +1,13 @@
 <h2>{{shelf.name}}</h2>
 <ol class="books">
-  <li *ngFor="let book of shelf.books"
-      [class.selected]="book === selectedBook"
-      (click)="onSelect(book)">
+
+  <li *ngFor="let book of shelf.books">
+      <!--[class.selected]="book === selectedBook"-->
+      <!--(click)="onSelect(book)">-->
     <!--add a badge, perhaps numbered?-->
-    {{book.title}}
+    <a routerLink="/detail/{{book.id}}">
+      {{book.title}}
+    </a>
   </li>
 </ol>
 
-<book-details [book]="selectedBook"></book-details>

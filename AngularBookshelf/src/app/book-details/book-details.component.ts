@@ -1,5 +1,9 @@
 import { Component, OnInit, Input} from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
+import { Location } from "@angular/common";
+
 import { Book } from '../book';
+import { BookService } from "../book.service";
 
 @Component({
   selector: 'book-details',
@@ -8,10 +12,22 @@ import { Book } from '../book';
 })
 
 export class BookDetailsComponent implements OnInit {
-  @Input() book: Book;
+  // @Input()
+  book: Book;
 
-  constructor() {}
+  constructor(
+    private route: ActivatedRoute,
+    private bookService: BookService,
+    private location: Location
+  ) {}
 
   ngOnInit(): void {
+    console.log("isbroken");
+    this.getBook();
+  }
+
+  getBook(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.book = this.bookService.getBook(id);
   }
 }

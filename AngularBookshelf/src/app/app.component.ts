@@ -1,6 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {Shelf} from "./shelf";
-import {ShelfService} from "./shelf.service";
 
 
 @Component({
@@ -8,19 +6,20 @@ import {ShelfService} from "./shelf.service";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
-  title = 'My Bookshelf';
+export class AppComponent{
+  // implements OnInit{
 
-  shelfList: Shelf[];
 
-  constructor(private shelfService: ShelfService){}
+  // shelfList: Shelf[];
 
-  getShelves(): void{
-    this.shelfList = this.shelfService.getShelves();
-  }
-
-  ngOnInit() {
-    this.getShelves();
-  }
+  // constructor(private shelfService: ShelfService){}
+  //
+  // getShelves(): void{
+  //   this.shelfList = this.shelfService.getShelves();
+  // }
+  //
+  // ngOnInit() {
+  //   this.getShelves();
+  // }
 
 }

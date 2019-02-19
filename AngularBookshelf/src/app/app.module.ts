@@ -7,13 +7,15 @@ import {BookComponent} from "./book/book.component";
 import {ShelfComponent} from "./shelf/shelf.component";
 import {BookDetailsComponent} from "./book-details/book-details.component";
 import { AppRoutingModule } from './app-routing.module';
+import {BookshelfComponent} from "./bookshelf/bookshelf.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     BookComponent,
     ShelfComponent,
-    BookDetailsComponent
+    BookDetailsComponent,
+    BookshelfComponent
   ],
   imports: [
     BrowserModule,

@@ -12,11 +12,11 @@ import { ShelfService } from "../shelf.service";
 })
 export class ShelfComponent implements OnInit {
   @Input() shelf: Shelf;
-  selectedBook: Book;
-
-  onSelect(book: Book): void {
-    this.selectedBook = book;
-  }
+  // selectedBook: Book;
+  //
+  // onSelect(book: Book): void {
+  //   this.selectedBook = book;
+  // }
 
   constructor() {
   }
