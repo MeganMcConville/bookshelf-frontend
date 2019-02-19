@@ -7,4 +7,15 @@
       <input [(ngModel)]="book.currentPage" placeholder="page">
     </label>
   </div>
+  <ul>Comments
+    <li *ngFor="let comment of book.comments">
+      {{comment}}
+    </li>
+  </ul>
+  <div>
+    <label>
+      <!--put in method for saving value in input on button click-->
+    <input placeholder="Add Comment">
+    </label>
+  </div>
 </div>
