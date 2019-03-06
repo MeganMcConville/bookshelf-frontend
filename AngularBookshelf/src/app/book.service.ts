@@ -5,6 +5,7 @@ import { FANTASYBOOKS } from "./mock-fantasy-books";
 import { NONFICTIONBOOKS } from "./mock-nonfiction-books";
 import {Observable, of} from "rxjs";
 import { ShelfService } from "./shelf.service";
+import {Shelf} from "./shelf";
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +16,8 @@ export class BookService {
     private shelfService: ShelfService
   ) { }
 
-  getBook(id: number ): Book {
-    let shelvesToCheck = this.shelfService.getShelves();
+  async getBook(id: number ): Promise<Book> {
+    let shelvesToCheck = await this.shelfService.getShelves().toPromise().then(resp =>resp as Shelf[]);
     for (let shelf of shelvesToCheck){
       let book = shelf.books.find(book => book.id === id);
       if(book !== undefined){

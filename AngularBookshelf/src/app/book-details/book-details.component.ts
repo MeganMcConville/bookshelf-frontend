@@ -22,12 +22,15 @@ export class BookDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    console.log("isbroken");
     this.getBook();
   }
 
   getBook(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.book = this.bookService.getBook(id);
+    this.bookService.getBook(id).then(book => this.book = book);
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 }

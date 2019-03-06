@@ -1,0 +1,11 @@
+h1{
+  text-decoration: underline;
+  text-decoration-color: #854442;
+  color: #3c2f2f;
+}
+
+ul {
+  list-style-type: none;
+  margin-bottom: 0;
+  margin-top: 0;
+}

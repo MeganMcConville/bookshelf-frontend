@@ -15,7 +15,7 @@ export class BookshelfComponent implements OnInit{
   constructor(private shelfService: ShelfService){}
 
   getShelves(): void{
-    this.shelfList = this.shelfService.getShelves();
+    this.shelfService.getShelves().toPromise().then(shelf => this.shelfList = shelf);
   }
 
   ngOnInit() {

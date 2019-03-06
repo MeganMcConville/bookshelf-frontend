@@ -1,0 +1,30 @@
+h2{
+  color: #fff4e6;
+  background-color: #3c2f2f;
+  padding: 10px;
+  margin: 0;
+}
+
+.book a{
+  text-decoration: none;
+  color: #fff4e6;
+}
+
+.book a:hover{
+  color: #854442;
+}
+
+.book li{
+  background-color: #854442;
+  color: #fff4e6;
+  list-style-position: inside;
+  padding: 5px;
+  margin: 0;
+}
+
+.book li:hover{
+  list-style-position: inside;
+  background-color: #fff4e6;
+  color: #854442;
+  padding: 5px;
+}

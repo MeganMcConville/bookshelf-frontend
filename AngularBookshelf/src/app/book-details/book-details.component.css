@@ -1,0 +1,18 @@
+ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li{
+  background-color: #4b3832;
+  color: #fff4e6;
+  width: 20em;
+  border-radius: 0px 15px 15px 0px;
+  border-left-style: solid;
+  border-left-color: #fff4e6;
+  border-left-width: 5px;
+  border-bottom-style: solid;
+  border-bottom-color: #fff4e6;
+  border-bottom-width: 3px;
+  padding: 10px;
+}

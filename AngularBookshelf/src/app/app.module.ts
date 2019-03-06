@@ -8,6 +8,7 @@ import {ShelfComponent} from "./shelf/shelf.component";
 import {BookDetailsComponent} from "./book-details/book-details.component";
 import { AppRoutingModule } from './app-routing.module';
 import {BookshelfComponent} from "./bookshelf/bookshelf.component";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {BookshelfComponent} from "./bookshelf/bookshelf.component";
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
