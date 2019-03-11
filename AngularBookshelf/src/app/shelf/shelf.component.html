@@ -1,11 +1,10 @@
 <div>
-<h2>{{shelf.name}}</h2>
+<div class="shelfTitle">
+  <h2>{{shelf.name}}</h2>
+  <button class="createNew" title="Add a new book">+</button>
+</div>
 <ol class="book">
-
   <li *ngFor="let book of shelf.books">
-      <!--[class.selected]="book === selectedBook"-->
-      <!--(click)="onSelect(book)">-->
-    <!--add a badge, perhaps numbered?-->
     <a routerLink="/detail/{{book.id}}">
       {{book.title}}
     </a>

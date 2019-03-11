@@ -5,6 +5,24 @@ h2{
   margin: 0;
 }
 
+div.shelfTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 35%;
+  background-color: #3c2f2f;
+}
+
+button.createNew{
+  background-color: #fff4e6;
+  color: #3c2f2f;
+  border: 2px outset #854442;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1em;
+}
+
 .book a{
   text-decoration: none;
   color: #fff4e6;
@@ -18,8 +36,9 @@ h2{
   background-color: #854442;
   color: #fff4e6;
   list-style-position: inside;
-  padding: 5px;
-  margin: 0;
+  padding: 5px 0 5px 0;
+  margin-left: 0;
+  width: 35%;
 }
 
 .book li:hover{
@@ -27,4 +46,10 @@ h2{
   background-color: #fff4e6;
   color: #854442;
   padding: 5px;
+}
+
+ol, ul, li {
+  /*list-style-;*/
+  margin: 0;
+  padding: 0;
 }

@@ -1,13 +1,14 @@
+<div class="background">
 <div *ngIf="book">
   <h2>{{book.title}}</h2>
   <p>by {{book.author}}</p>
   <p>Your current page: {{book.currentPage}}</p>
   <div>
     <label>Current Page:
-      <input [(ngModel)]="book.currentPage" placeholder="page">
+      <input class="pageInput" [(ngModel)]="book.currentPage" placeholder="page">
     </label>
   </div>
-  <ul>Comments
+  <ul>Comments:
     <li *ngFor="let comment of book.comments">
       {{comment}}
     </li>
@@ -17,8 +18,10 @@
       <!--put in method for saving value in input on button click-->
     <input placeholder="Add Comment">
     </label>
+    <button class="saveButton">Save</button>
   </div>
 </div>
+</div>
 <div>
-  <button (click)="goBack()">Return to Shelves</button>
+  <button class="detailButton" (click)="goBack()">Return to Shelves</button>
 </div>
