@@ -10,12 +10,11 @@
   </div>
   <ul>Comments:
     <li *ngFor="let comment of book.comments">
-      {{comment}}
+      {{comment.content}}
     </li>
   </ul>
   <div>
     <label>
-      <!--put in method for saving value in input on button click-->
     <input placeholder="Add Comment">
     </label>
     <button class="saveButton">Save</button>
@@ -23,5 +22,5 @@
 </div>
 </div>
 <div>
-  <button class="detailButton" (click)="goBack()">Return to Shelves</button>
+  <button class="returnButton" (click)="goBack()">Return to Shelves</button>
 </div>

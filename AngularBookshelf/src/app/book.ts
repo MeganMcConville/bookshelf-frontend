@@ -2,6 +2,6 @@ export class Book {
  title: string;
  author: string;
  currentPage: number;
- comments: string[];
+ comments: Comment[];
  id: number;
 }

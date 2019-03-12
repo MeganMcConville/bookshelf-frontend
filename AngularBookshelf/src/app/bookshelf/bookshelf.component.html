@@ -1,7 +1,9 @@
 <h1>{{title}}</h1>
 <button class="newShelfButton">Create New Shelf</button>
+<div class="flexDiv">
 <ul>
   <li *ngFor="let shelf of shelfList">
     <shelf [shelf]="shelf"></shelf>
   </li>
 </ul>
+</div>

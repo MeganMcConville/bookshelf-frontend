@@ -1,17 +1,17 @@
 h1{
   text-decoration: underline;
-  text-decoration-color: #854442;
-  color: #be9b7b;
+  text-decoration-color: #3c2f2f;
+  color: #fff4e6;
   font-size: 2.5em;
-  text-shadow: -2px 0 #854442, 0 2px #854442, 2px 0 #854442, 0 -2px #854442;
-  /*font-family: spectral;*/
+  text-shadow: -2px 0 #4b3832, 0 2px #4b3832, 2px 0 #4b3832, 0 -2px #4b3832;
+  font-family: Spectral Extra-Bold, serif;
 }
 
 ul {
   list-style-type: none;
   margin-bottom: 0;
   margin-top: 0;
-  /*font-family: spectral;*/
+  font-family: Spectral, serif;
 }
 
 button.newShelfButton{
@@ -26,4 +26,11 @@ button.newShelfButton{
   position: fixed;
   right: 10px;
   top: 10px;
+  font-family: Spectral, serif;
+}
+
+div.flexDiv {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
 }

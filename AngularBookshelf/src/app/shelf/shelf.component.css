@@ -3,6 +3,7 @@ h2{
   background-color: #3c2f2f;
   padding: 10px;
   margin: 0;
+  font-family: Spectral, serif;
 }
 
 div.shelfTitle {
@@ -21,15 +22,19 @@ button.createNew{
   text-align: center;
   text-decoration: none;
   font-size: 1em;
+  font-family: Spectral, serif;
+  margin-right: .5em;
 }
 
 .book a{
   text-decoration: none;
   color: #fff4e6;
+  font-family: Spectral, serif;
 }
 
 .book a:hover{
   color: #854442;
+  font-family: Spectral, serif;
 }
 
 .book li{
@@ -39,6 +44,7 @@ button.createNew{
   padding: 5px 0 5px 0;
   margin-left: 0;
   width: 35%;
+  font-family: Spectral, serif;
 }
 
 .book li:hover{
@@ -46,10 +52,10 @@ button.createNew{
   background-color: #fff4e6;
   color: #854442;
   padding: 5px;
+  font-family: Spectral, serif;
 }
 
 ol, ul, li {
-  /*list-style-;*/
   margin: 0;
   padding: 0;
 }
