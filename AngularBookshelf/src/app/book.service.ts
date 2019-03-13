@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 
 import { Book } from "./book";
-import { FANTASYBOOKS } from "./mock-fantasy-books";
-import { NONFICTIONBOOKS } from "./mock-nonfiction-books";
 import {Observable, of} from "rxjs";
 import { ShelfService } from "./shelf.service";
 import {Shelf} from "./shelf";
+import {HttpClient, HttpParams} from "@angular/common/http";
+
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,8 @@ import {Shelf} from "./shelf";
 export class BookService {
 
   constructor(
-    private shelfService: ShelfService
+    private shelfService: ShelfService,
+    private http: HttpClient
   ) { }
 
   async getBook(id: number ): Promise<Book> {
@@ -25,5 +26,12 @@ export class BookService {
       }
     }
     return null;
+  }
+
+  updateCurrentPage(currentPage: string, bookId: number): void {
+    let url: string = "http://localhost:8080/books/" + bookId + "/updateCurrentPage";
+    let params = new HttpParams().set("currentPage", currentPage);
+    this.http.post(url, {params: params}).toPromise().then(() => console.log("update finished"));
+    console.log("it made it inside the book service update method")
   }
 }

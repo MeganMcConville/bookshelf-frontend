@@ -4,6 +4,8 @@ import { Location } from "@angular/common";
 
 import { Book } from '../book';
 import { BookService } from "../book.service";
+import { Comment } from "../comment";
+import {CommentService} from "../comment.service";
 
 @Component({
   selector: 'book-details',
@@ -12,13 +14,13 @@ import { BookService } from "../book.service";
 })
 
 export class BookDetailsComponent implements OnInit {
-  // @Input()
   book: Book;
 
   constructor(
     private route: ActivatedRoute,
     private bookService: BookService,
-    private location: Location
+    private location: Location,
+    private commentService: CommentService
   ) {}
 
   ngOnInit(): void {
@@ -32,5 +34,23 @@ export class BookDetailsComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  saveComment(content: string): void {
+    this.commentService.saveComment(content, this.book.id).toPromise().then(commentId => {
+      var comment: Comment = new Comment();
+      comment.content = content;
+      comment.bookId = this.book.id;
+      comment.id = commentId;
+      this.book.comments.push(comment);
+    })
+  }
+
+  updateCurrentPage(currentPage: string): void {
+    if(currentPage != "") {
+      console.log("It made it inside the component update method")
+      this.bookService.updateCurrentPage(currentPage, this.book.id);
+    }
+    console.log("It didn't make it inside the component if")
   }
 }

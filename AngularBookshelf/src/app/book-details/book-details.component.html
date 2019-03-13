@@ -5,8 +5,9 @@
   <p>Your current page: {{book.currentPage}}</p>
   <div>
     <label>Current Page:
-      <input class="pageInput" [(ngModel)]="book.currentPage" placeholder="page">
+      <input class="pageInput" [(ngModel)]="book.currentPage" placeholder="page" #currentPage type="number" onfocus="this.value=''">
     </label>
+    <button class="saveButton" (click)="updateCurrentPage(currentPage.value)">Update</button>
   </div>
   <ul>Comments:
     <li *ngFor="let comment of book.comments">
@@ -15,9 +16,9 @@
   </ul>
   <div>
     <label>
-    <input placeholder="Add Comment">
+    <input placeholder="Add Comment" #content>
     </label>
-    <button class="saveButton">Save</button>
+    <button class="saveButton" (click)="saveComment(content.value)">Save</button>
   </div>
 </div>
 </div>

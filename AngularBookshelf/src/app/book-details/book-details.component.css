@@ -1,7 +1,7 @@
 ul{
-  list-style-type: circle;
   padding: 0;
   font-family: Spectral, serif;
+  list-style-position: inside;
 }
 
 ul li{
@@ -52,4 +52,10 @@ button.saveButton{
 input.pageInput{
   width: 3em;
   font-family: Spectral, serif;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
