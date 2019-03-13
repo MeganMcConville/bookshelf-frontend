@@ -47,6 +47,7 @@ button.saveButton{
   border-radius: 1px;
   text-align: center;
   font-family: Spectral, serif;
+  border-radius: 4px;
 }
 
 input.pageInput{

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
-import {BookComponent} from "./book/book.component";
+// import {BookComponent} from "./book/book.component";
 import {ShelfComponent} from "./shelf/shelf.component";
 import {BookDetailsComponent} from "./book-details/book-details.component";
 import { AppRoutingModule } from './app-routing.module';
@@ -13,7 +13,7 @@ import { HttpClientModule } from "@angular/common/http";
 @NgModule({
   declarations: [
     AppComponent,
-    BookComponent,
+    // BookComponent,
     ShelfComponent,
     BookDetailsComponent,
     BookshelfComponent

@@ -11,8 +11,9 @@ div.shelfTitle {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 35%;
+  width: 100%;
   background-color: #3c2f2f;
+  border-left: 2px solid #854442;
 }
 
 button.createNew{
@@ -24,6 +25,7 @@ button.createNew{
   font-size: 1em;
   font-family: Spectral, serif;
   margin-right: .5em;
+  border-radius: 4px;
 }
 
 .book a{
@@ -43,7 +45,7 @@ button.createNew{
   list-style-position: inside;
   padding: 5px 0 5px 0;
   margin-left: 0;
-  width: 35%;
+  width: 100%;
   font-family: Spectral, serif;
 }
 

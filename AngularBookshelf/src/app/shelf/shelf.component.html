@@ -1,7 +1,19 @@
 <div>
 <div class="shelfTitle">
   <h2>{{shelf.name}}</h2>
-  <button class="createNew" title="Add a new book">+</button>
+  <button class="createNew" title="Add a new book" type="button" data-toggle="collapse"
+  [attr.data-target]="'#createBookDiv-' + shelf.id" aria-expanded="false" aria-controls="createBookDiv">+</button>
+  <div id="createBookDiv-{{shelf.id}}" class="collapse">
+    <label>Title:
+      <input type="text" id="newTitle">
+    </label>
+    <label>Author:
+      <input type="text" id="newAuthor">
+    </label>
+    <label>Current Page:
+      <input type="number" id="newCurrentPage">
+    </label>
+  </div>
 </div>
 <ol class="book">
   <li *ngFor="let book of shelf.books">

@@ -1,9 +1,17 @@
 <h1>{{title}}</h1>
-<button class="newShelfButton">Create New Shelf</button>
-<div class="flexDiv">
+<button id="new-shelf-button" type="button" data-toggle="collapse" data-target="#createInput" aria-expanded="false" aria-controls="createInput">Create New Shelf</button>
+<div id="createInput" class="collapse collapseDiv">
+  <label>Shelf Name:
+    <input type="text" id="newShelfName" #newShelfName>
+  </label>
+  <button class="saveButton" (click)="createNewShelf(newShelfName.value)">Create</button>
+</div>
+<!--<div class="flexDiv">-->
 <ul>
+  <div class="flexDiv">
   <li *ngFor="let shelf of shelfList">
     <shelf [shelf]="shelf"></shelf>
   </li>
+  </div>
 </ul>
-</div>
+<!--</div>-->

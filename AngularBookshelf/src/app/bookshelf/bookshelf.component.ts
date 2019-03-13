@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Shelf} from "../shelf";
 import {ShelfService} from "../shelf.service";
+import {Book} from "../book";
 
 
 @Component({
@@ -20,6 +21,15 @@ export class BookshelfComponent implements OnInit{
 
   ngOnInit() {
     this.getShelves();
+  }
+
+  createNewShelf(name: string): void {
+    this.shelfService.createNewShelf(name).toPromise().then(shelfId => {
+      let shelf: Shelf = new Shelf();
+      shelf.name = name;
+      shelf.id = shelfId;
+      this.shelfList.push(shelf);
+    })
   }
 
 }

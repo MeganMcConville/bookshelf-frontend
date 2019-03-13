@@ -12,9 +12,10 @@ ul {
   margin-bottom: 0;
   margin-top: 0;
   font-family: Spectral, serif;
+  width: 75%;
 }
 
-button.newShelfButton{
+button#new-shelf-button{
   background-color: #3c2f2f;
   color: #fff4e6;
   border: 2px outset #854442;
@@ -33,4 +34,30 @@ div.flexDiv {
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
+
+}
+
+button.saveButton{
+  background-color: #3c2f2f;
+  color: #fff4e6;
+  border: 2px outset #be9b7b;
+  text-align: center;
+  font-family: Spectral, serif;
+  width: 100%;
+  border-radius: 4px;
+}
+
+div.collapseDiv{
+  background-color: #fff4e6;
+  font-family: Spectral, serif;
+  width: 25%;
+  position: fixed;
+  right: 10px;
+  padding: 5px;
+  border: 2px outset #854442;
+}
+
+#newShelfName{
+  width: 80%;
+  text-wrap: normal;
 }
