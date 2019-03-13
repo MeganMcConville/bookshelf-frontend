@@ -6,4 +6,5 @@ export class Book {
  currentPage: number;
  comments: Comment[];
  id: number;
+ shelfId: number;
 }
