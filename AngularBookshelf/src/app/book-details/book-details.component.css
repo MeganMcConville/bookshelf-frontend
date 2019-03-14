@@ -38,13 +38,13 @@ div.background {
   padding: 1em;
   width: 35%;
   font-family: Spectral, serif;
+  color: #4b3832;
 }
 
 button.saveButton{
   background-color: #3c2f2f;
   color: #fff4e6;
   border: 2px outset #be9b7b;
-  border-radius: 1px;
   text-align: center;
   font-family: Spectral, serif;
   border-radius: 4px;

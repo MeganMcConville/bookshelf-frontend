@@ -3,18 +3,21 @@
   <h2>{{shelf.name}}</h2>
   <button class="createNew" title="Add a new book" type="button" data-toggle="collapse"
   [attr.data-target]="'#createBookDiv-' + shelf.id" aria-expanded="false" aria-controls="createBookDiv">+</button>
-  <div id="createBookDiv-{{shelf.id}}" class="collapse">
+</div>
+  <div id="createBookDiv-{{shelf.id}}" class="collapse collapseNewBook">
     <label>Title:
-      <input type="text" id="newTitle">
+      <input type="text" id="newTitle" #newTitle>
     </label>
     <label>Author:
-      <input type="text" id="newAuthor">
+      <input type="text" id="newAuthor" #newAuthor>
     </label>
     <label>Current Page:
-      <input type="number" id="newCurrentPage">
+      <input type="number" id="newCurrentPage" #newCurrentPage>
     </label>
+    <button class="saveButton" (click)="createNewBook(newTitle.value, newAuthor.value, newCurrentPage.value)" data-toggle="collapse"
+            [attr.data-target]="'#createBookDiv-' + shelf.id">Save</button>
   </div>
-</div>
+
 <ol class="book">
   <li *ngFor="let book of shelf.books">
     <a routerLink="/detail/{{book.id}}">
