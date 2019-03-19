@@ -32,4 +32,14 @@ export class ShelfComponent implements OnInit {
     })
   }
 
+  deleteBook(bookId: number): void {
+    this.bookService.deleteBook(bookId).toPromise().then(() => {
+      let book = this.shelf.books.filter(x => x.id == bookId)[0];
+      let index = this.shelf.books.indexOf(book, 0);
+      if(index > -1){
+        this.shelf.books.splice(index,1);
+      }
+    });
+  }
+
 }

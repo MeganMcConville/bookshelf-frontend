@@ -37,7 +37,6 @@ export class BookService {
     let url: string = "http://localhost:8080/books/" + bookId + "/updateCurrentPage";
     let params = new HttpParams().set("currentPage", currentPage);
     this.http.post(url, {params: params}).toPromise().then(() => console.log("update finished"));
-    console.log("it made it inside the book service update method")
   }
 
   createNewBook(title: string, author: string, currentPage: number, shelfId: number): Observable<number> {
@@ -47,5 +46,10 @@ export class BookService {
     book.currentPage = currentPage;
     book.shelfId = shelfId;
     return this.http.post<number>(this.postUrl, book, httpOptions);
+  }
+
+  deleteBook(bookId: number): Observable<void> {
+    let url: string = "http://localhost:8080/books/" + bookId;
+    return this.http.delete<void>(url);
   }
 }

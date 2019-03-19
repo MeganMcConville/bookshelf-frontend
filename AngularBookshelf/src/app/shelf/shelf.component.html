@@ -23,6 +23,7 @@
     <a routerLink="/detail/{{book.id}}">
       {{book.title}}
     </a>
+    <button class="deleteButton" title="Delete this book" type="button" (click)="deleteBook(book.id)">X</button>
   </li>
 </ol>
 </div>

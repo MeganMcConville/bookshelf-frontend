@@ -83,6 +83,10 @@ ol, ul, li {
   border-left: 2px solid #854442;
 }
 
+button.deleteButton{
+
+}
+
 /*Webkit browsers*/
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
